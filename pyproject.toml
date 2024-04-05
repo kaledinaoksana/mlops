@@ -1,0 +1,44 @@
+[project]
+
+# BASIC INFORMATION
+name = "mlops-ods"
+version = "1.0.0"
+
+### DEPENDENCIES AND REQUIREMENTS
+requires-python = ">= 3.8"
+
+# ABOUT YOUR PROJECT
+authors = [{name = "Oksana Kaledina", email = "kaledinaoa@gmail.com"}]
+maintainers = [{name = "Oksana Kaledina", email = "kaledinaoa@gmail.com"}]
+description = "educational project"
+readme = "README.md"
+license = {text = "Oxana License"}
+
+# URLS
+[project.urls]
+Homepage = "https://"
+Documentation = "https://"
+Repository = "https://github.com/"
+Issues = "https://github.com/"
+Changelog = "https://github.com/"
+
+
+# CONSTANTS
+[tool]
+LINE_LENGTH_VAR = 88
+
+# FORMATTERS
+[tool.black]
+line-length = ${tool.LINE_LENGTH_VAR}
+
+# LINKERS
+[tool.flake8]
+max-line-length = ${tool.LINE_LENGTH_VAR}
+extend-ignore = "E203, W503"
+[tool.isort]
+line_length = ${tool.LINE_LENGTH_VAR}
+multi_line_output = 3
+include_trailing_comma = true
+[tool.mypy]
+python_version = 3.8
+[tool.ruff]
