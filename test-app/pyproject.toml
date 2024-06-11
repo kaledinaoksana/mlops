@@ -107,10 +107,10 @@ unfixable = []
 max-complexity = 5
 
 [tool.poetry]
-name = "my-package"
+name = "test-app"
 version = "0.1.0"
 description = "The description of the package"
-
+readme = "README.md"
 license = "MIT"
 
 authors = [
