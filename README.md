@@ -19,3 +19,20 @@ git push --set-upstream origin new-task-branch
 git checkout master
 git merge new-task-branch
 ```
+
+## Docker
+
+```bash
+docker build . -t test_pytorch
+docker run -it --entrypoint /bin/bash test_pytorch
+```
+**Менеджер**: [poetry](https://python-poetry.org/)
+
+когда ты используешь команду poetry add numpy -- она автоматически добавляет это в poetry.lock и pyproject.toml
+
+**Шаблонизация**: [copier](https://copier.readthedocs.io/en/stable/)
+
+
+**Автоматизация**: [poethepoet](https://poethepoet.natn.io/index.html)
+
+

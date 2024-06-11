@@ -1,0 +1,4 @@
+pipx
+pre-commit
+numpy
+pandas

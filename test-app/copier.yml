@@ -1,0 +1,38 @@
+# default
+username:
+    type: kaledinaoa
+
+organization:
+    type: homemade
+
+email:
+    type: kaledinaoa@gmail.com
+    # Notice that both `username` and `organization` have been already asked
+    default: "{{ username }}@{{ organization }}.com"
+
+# help
+copyright_holder:
+    type: str
+    when: "{% if organization != 'Public domain' %}true{% endif %}"
+    help: The person or entity within {{ organization }} that holds copyrights.
+
+# type
+target:
+    type: str
+    choices:
+        - humans
+        - machines
+
+user_config:
+    type: "{% if target == 'humans' %}yaml{% else %}json{% endif %}"
+
+# choices
+title:
+    type: str
+    help: Your title within {{ organization }}
+
+contact:
+    choices:
+        Copyright holder: "{{ copyright_holder }}"
+        CEO: Oksana Kaledina
+        "{{ title }}": "{{ username }}"
